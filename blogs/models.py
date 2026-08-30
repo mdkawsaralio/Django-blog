@@ -32,7 +32,7 @@ class Blog(models.Model):
     status=models.CharField(choices=status_choice,default="Draft",max_length=10)
     is_featured=models.BooleanField(default=False)
     created_at=models.DateTimeField(auto_now_add=True)
-    updataed_at=models.DateTimeField(auto_now=True)
+    updated_at=models.DateTimeField(auto_now=True)
 
 
 
