@@ -19,13 +19,14 @@ from django.urls import path,include
 from blog_main.views import home
 from django.conf.urls.static import static
 from django.conf import settings
+from blogs import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('',home,name='home'),
     path('category/',include('blogs.urls')),
-    
+    path('<slug:slug>',views.blogs,name="blogs"),
 
 
 

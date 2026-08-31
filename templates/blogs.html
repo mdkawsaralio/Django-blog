@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="card border-0">
+      
+      <div class="card-body">
+        <h3>{{ blogs.title }}</h3>
+        
+        <small class="mb-1 text-muted">{{ blogs.created_at|timesince }} ago | {{ blogs.author }}</small>
+        {% if blogs.featured_image %}
+    <img src="{{ blogs.featured_image.url }}"
+         class="img-fluid mx-auto d-block blog-detail-image"
+         alt="{{ blogs.title }}">
+{% endif %}
+        <p class="card-text">{{ blogs.blog_body }}</p>
+        <small class="text-muted d-block mt-2">Last updated: {{ blogs.updated_at|timesince }} ago</small>
+      </div>
+    </div>
+
+{% endblock %}
