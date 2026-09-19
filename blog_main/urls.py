@@ -27,6 +27,7 @@ urlpatterns = [
     path('',home,name='home'),
     path('category/',include('blogs.urls')),
     path('<slug:slug>',views.blogs,name="blogs"),
+    path('blog/search/',views.search,name="search")
 
 
 
