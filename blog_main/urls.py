@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 from blogs import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -30,7 +31,8 @@ urlpatterns = [
     path('blog/search/',views.search,name="search"),
     path('register/',register,name='register'),
     path('login/',login,name='login'),
-    path('logout/',logout,name='logout')
+    path('logout/',logout,name='logout'),
 
+    path('dashboard/',include('dashboards.urls')),
 
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
