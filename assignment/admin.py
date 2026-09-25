@@ -1,5 +1,5 @@
 from django.contrib import admin
-from social.models import About,Sociallink
+from assignment.models import About,Sociallink
 # Register your models here.
 
 class Aboutadmin(admin.ModelAdmin):

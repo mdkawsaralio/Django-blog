@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('social', '0002_sociallink_alter_about_options'),
+        ('assignment', '0002_sociallink_alter_about_options'),
     ]
 
     operations = [

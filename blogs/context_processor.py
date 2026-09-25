@@ -1,6 +1,6 @@
 
 from blogs.models import Category
-from social.models import Sociallink
+from assignment.models import Sociallink
 
  
 
